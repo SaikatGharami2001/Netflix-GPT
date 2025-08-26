@@ -1,7 +1,16 @@
-import React from "react";
+import { lazy, Suspense } from "react";
+
+import { LOGO, BACKGROUND_IMG } from "../Utils/Constants";
+
+const Header = lazy(() => import("../Components/Header"));
 
 const Login = () => {
-  return <div>Login</div>;
+  return (
+    <>
+      <Header />
+      <img src={LOGO} />
+    </>
+  );
 };
 
 export default Login;
